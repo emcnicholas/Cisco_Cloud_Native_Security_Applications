@@ -25,10 +25,7 @@ variable "cluster-name" {
 variable "lab_id" {
   description = "ID associated with this lab instance"
 }
-//variable "vpc_name" {
-//  description = "Name of AWS VPC"
-//    default = "CNS_Lab"
-//}
+
 // Secure Cloud Analytics Service Key //
 // Uncomment the variable below if deploying Secure Cloud Analytics
 variable "sca_service_key" {
@@ -58,5 +55,4 @@ variable "secure_workload_root_scope" {
 // Local Variables //
 locals {
   eks_cluster_name = "${var.cluster-name}_${var.lab_id}"
-//  vpc_name = "${var.vpc_name}_${var.lab_id}"
 }
