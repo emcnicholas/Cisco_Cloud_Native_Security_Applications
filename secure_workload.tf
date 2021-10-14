@@ -14,7 +14,7 @@ resource "tetration_scope" "scope" {
 // Yelb App Scope
 resource "tetration_scope" "yelb_app_scope" {
   depends_on = [tetration_scope.scope]
-  short_name          = "Yelb"
+  short_name          = "Yelb_${var.lab_id}"
   short_query_type    = "eq"
   short_query_field   = "user_orchestrator_system/namespace"
   short_query_value   = "yelb"
@@ -214,7 +214,7 @@ resource "tetration_application" "yelb_app" {
 // NGINX App Scope
 resource "tetration_scope" "nginx_app_scope" {
   depends_on = [tetration_scope.scope]
-  short_name          = "NGINX"
+  short_name          = "NGINX_${var.lab_id}"
   short_query_type    = "eq"
   short_query_field   = "user_orchestrator_system/namespace"
   short_query_value   = "nginx"
